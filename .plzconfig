@@ -1,0 +1,21 @@
+[parse]
+preloadsubincludes = ///go//build_defs:go
+preloadsubincludes = ///python//build_defs:python
+
+[Plugin "go"]
+Target = //plugins:go
+Modfile = //third_party:modfile
+GoTool = //third_party:toolchain|go
+Stdlib = //third_party:std
+LegacyImports = True
+ValidateModuleVersion = true
+CoverageRedesign = true
+RequireLicences = true
+
+[Plugin "python"]
+Target = //plugins:python
+
+[alias "puku"]
+cmd = run --wd=. //third_party:puku --
+desc = Formats BUILD files and update go rules
+positionallabels = true
