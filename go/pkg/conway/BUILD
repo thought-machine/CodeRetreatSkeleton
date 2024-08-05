@@ -7,5 +7,8 @@ go_library(
 go_test(
     name = "conway_test",
     srcs = ["conway_test.go"],
-    deps = [":conway"],
+    deps = [
+        ":conway",
+        "///third_party/go/github.com_stretchr_testify//assert",
+    ],
 )

@@ -4,9 +4,9 @@ preloadsubincludes = ///python//build_defs:python
 
 [Plugin "go"]
 Target = //plugins:go
-Modfile = //third_party:modfile
-GoTool = //third_party:toolchain|go
-Stdlib = //third_party:std
+Modfile = //third_party/go:modfile
+GoTool = //third_party/go:toolchain|go
+Stdlib = //third_party/go:std
 LegacyImports = True
 ValidateModuleVersion = true
 CoverageRedesign = true
@@ -16,6 +16,6 @@ RequireLicences = true
 Target = //plugins:python
 
 [alias "puku"]
-cmd = run --wd=. //third_party:puku --
+cmd = run --wd=. //third_party/go:puku --
 desc = Formats BUILD files and update go rules
 positionallabels = true
