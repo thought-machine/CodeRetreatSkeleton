@@ -1,2 +1,2 @@
-def DoSomething():
+def do_something():
   return 123
