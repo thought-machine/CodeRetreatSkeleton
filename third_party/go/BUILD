@@ -26,8 +26,12 @@ remote_file(
     out = "puku",
     binary = True,
     extract = False,
-    hashes = ["c3e4c8bd035487504e568d791d36a4a45c5b8f59a58dc1d8863ba39338b3fb24"],
-    url = f"https://github.com/please-build/puku/releases/download/v{PUKU_VERSION}/puku-{PUKU_VERSION}-linux_amd64",
+    hashes = [
+        "aaad2de29dba4c749889a29553ee259c5c4f55bfb7b549109c7ead0a20f8302e",  #darwin_amd64
+        "d6bdb8c2a31d9f3309c348115f9cbf4476213b982089125bdf4df1c769d202a5",  #darwin_arm64
+        "c3e4c8bd035487504e568d791d36a4a45c5b8f59a58dc1d8863ba39338b3fb24",  #linux_amd64
+    ],
+    url = f"https://github.com/please-build/puku/releases/download/v{PUKU_VERSION}/puku-{PUKU_VERSION}-{CONFIG.HOSTOS}_{CONFIG.HOSTARCH}",
 )
 
 go_repo(

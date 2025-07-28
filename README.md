@@ -5,6 +5,8 @@ This repository contains skeleton code that Code Retreat Participants can use to
 ## Go
 
 ```shell
+echo "{\"PleasePath\":\"$PWD/pleasew\"}" > puku.json
+
 # Update BUILD files
 ./pleasew puku fmt //go/...
 
