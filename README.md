@@ -19,7 +19,7 @@ echo "{\"PleasePath\":\"$PWD/pleasew\"}" > puku.json
 # Install third party packages
 ./pleasew build //third_party/go:toolchain
 GO="$PWD/$(./pleasew query outputs //third_party/go:toolchain)/bin/go"
-(cd third_party/go && $GO get github.com/example/module@latest) && ./pleasew puku sync -w
+(cd third_party/go && $GO get github.com/stretchr/testify@latest) && ./pleasew puku sync -w
 ```
 
 ## Python
